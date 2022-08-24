@@ -1,18 +1,25 @@
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { Route, Routes } from 'react-router-native';
 import AppBar from './AppBar';
 import RepositoryList from './RepositoryList';
+import SignIn from './SignIn';
 
 const styles = StyleSheet.create({
-  backColor: {
+    container: {
     backgroundColor: '#b3b2b1',
   },
 });
 
 const Main = () => {
   return (
-    <View style={styles.backColor}>
+    <View style={styles.container}>
+        <ScrollView horizontal>
     <AppBar/>
-        <RepositoryList/>
+    </ScrollView>
+    <Routes>
+        <Route path="/" element={<RepositoryList />} exact />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
     </View>
   );
 };
