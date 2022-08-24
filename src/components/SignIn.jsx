@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import Text from './Text';
+import TextInput from './TextInput';
 
 const styles = StyleSheet.create({
       flexContainer: {
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 const SignIn = () => {
   return (
     <View style={styles.flexContainer}>
-        <Text>The sign in view</Text>
+        <TextInput/>
     </View>
   );
 };
